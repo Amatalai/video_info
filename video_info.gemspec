@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "video_info"
   s.version     = VideoInfo::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Thibaud Guillaume-Gentil']
+  s.authors     = ['Thibaud Guillaume-Gentil', 'zachar']
   s.email       = ['thibaud@thibaud.me']
   s.homepage    = 'http://rubygems.org/gems/video_info'
-  s.summary     = 'Vimeo & Youtube parser'
+  s.summary     = 'Vimeo & Youtube parser with patch for older multi_json'
   s.description = 'Get video info from youtube and vimeo url.'
 
   s.rubyforge_project = "video_info"
