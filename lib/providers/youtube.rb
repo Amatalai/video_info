@@ -31,7 +31,7 @@ module VideoInfo
     def get_info
       begin
         uri   = open("http://gdata.youtube.com/feeds/api/videos/#{@video_id}?v=2&alt=json", @openURI_options)
-        video = MultiJson.load(uri.read)
+        video = MultiJson.decode(uri.read)
         @provider         = "YouTube"
         @url              = "http://www.youtube.com/watch?v=#{@video_id}"
         @embed_url        = "http://www.youtube.com/embed/#{@video_id}"
