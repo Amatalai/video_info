@@ -33,8 +33,8 @@ module VideoInfo
         uri   = open("http://gdata.youtube.com/feeds/api/videos/#{@video_id}?v=2&alt=json", @openURI_options)
         video = MultiJson.decode(uri.read)
         @provider         = "YouTube"
-        @url              = "http://www.youtube.com/watch?v=#{@video_id}"
-        @embed_url        = "http://www.youtube.com/embed/#{@video_id}"
+        @url              = "https://www.youtube.com/watch?v=#{@video_id}"
+        @embed_url        = "https://www.youtube.com/embed/#{@video_id}"
         @embed_code       = "<iframe src=\"#{@embed_url}\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"#{@iframe_attributes}></iframe>"
         @title            = video['entry']['title']['$t']
         @description      = video['entry']['media$group']['media$description']['$t']
